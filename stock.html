@@ -5,65 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Stock Search Engine</title>
-    <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <title>API StockSearch app </title>
+    <link rel="stylesheet" href="./assets/media/logo.jpg">
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+
 </head>
 
 <body>
-
-    <header>
-        <nav class="navbar navbar-light" style="background-color: #E5E8E8;">
-            <a class="navbar-brand logo" href="#">
-                <img src="./assets/media/logo.jpg" width="80" height="80" class="d-inline-block align-top" alt="">
-                <div class="headline">Stock Search App</div>
-            </a>
-        </nav>
-    </header>
-
     <div class="container">
-        <h1>Stock Search</h1>
-    
-        <!-- stocks will Get Dumped Here -->
-        <div id="stocks-view"></div>
-    
-        <!-- Rendered Buttons will get Dumped Here  -->
-        <div id="buttons-view"></div>
-    
-        <form id="stock-form">
-          <label for="stock-input">Add a Stock Symbol</label>
-          <input type="text" id="stock-input"><br>
-    
-          <!-- Button triggers new stock to be added -->
-          <input id="add-stock" type="submit" value="Add a Stock Symbol">
-        </form>      
-    <div class="inputbody">
-            <div id="navDiv">
-                <nav class="navbar navbar-light bg-light searchnv">
-                    <span class="navbar-brand mb-0 h1">Other Search</span>
-                        <ul class="navbar-nav mr-auto hyplnk">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Advanced Search<span class="sr-only">(current)</span></a>
-                            </li>
-                        </ul>
-                    </nav>
-            
-            <form id="inputDiv" class="inptbr">
-                <div class="form-group inpt">
-                    <label for="formGroupExampleInput">Search</label>
-                    <input id="searchStock" type="text" class="form-control" placeholder="Search Keywords">
-                </div>
-                <button id="btnSubmit" type="Submit" class="btn btn-outline-secondary srcbtn">Submit</button>
-            </form>      
-
-    <footer class="container-fluid">
-        copyright
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+        <h2>Stock Add, Search and Update</h2>
+        <div id="stocks-view">
+        </div>
+        <br>
+        <input id="stockInfo" type="text" />
+        <input id="btnSubmit" type="submit" value="Submit" />
+        <input id="btnClear" name="btnClear" type="button" value="Clear" />
+        <input id="resetButtons" type="button" value="Reset" />
+        <div id="logoDiv">
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Company Name</th>
+                    <th scope="col">Stock Symbol</th>
+                    <th scope="col">Price</th>
+                    </tr>
+            </thead>
+            <tbody id='tBody'>
+            </tbody>
+        </table>
+        <hr>
+        <div id="newsDiv">
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <script src="app.js"></script>
 </body>
 
