@@ -1,4 +1,4 @@
-$(document).ready(function () {
+
   const validationList = [];
   const stocks = [];
 
@@ -74,7 +74,7 @@ $(document).ready(function () {
       $('#stocks-view').append(`<input id='${theId}' type='button' value='${stocks[i]}'/>&nbsp`);
     };
   };
-});
+
 
 
 
